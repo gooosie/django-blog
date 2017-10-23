@@ -1,0 +1,221 @@
+body,
+html {
+    font-family: Roboto, Helvetica, 'Source Han Sans', 'Noto Sans CJK', Arial, sans-serif;
+    overflow-x: hidden !important;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+}
+
+a img {
+    border: 0px;
+}
+
+.gooosie-logo-image {
+    height: 28px;
+    width: 140px;
+}
+
+.gooosie-header .mdl-menu__container {
+    z-index: 50;
+    margin: 0 !important;
+}
+
+.gooosie-header {
+    overflow: visible;
+    background-color: white;
+}
+
+.gooosie-header .material-icons {
+    color: #767777 !important;
+}
+
+.gooosie-header .mdl-layout__drawer-button {
+    background: transparent;
+    color: #767777;
+}
+
+.gooosie-header .mdl-navigation__link {
+    color: #757575;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.gooosie-navigation-container {
+    /* Simple hack to make the overflow happen to the left instead... */
+    direction: rtl;
+    -webkit-order: 1;
+    -ms-flex-order: 1;
+    order: 1;
+    width: 500px;
+    transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1), width 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gooosie-navigation {
+    /* ... and now make sure the content is actually LTR */
+    direction: ltr;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    width: 800px;
+}
+
+.gooosie-navigation .mdl-navigation__link {
+    display: inline-block;
+    height: 60px;
+    line-height: 68px;
+    background-color: transparent !important;
+    border-bottom: 4px solid transparent;
+}
+
+.gooosie-navigation .mdl-navigation__link:hover {
+    border-bottom: 4px solid #ffaa00;
+}
+
+.gooosie-drawer {
+    border-right: none;
+}
+
+.gooosie-mobile-title {
+    display: none !important;
+}
+
+.blog-posts {
+    max-width: 900px;
+    padding: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    padding-top: 16px;
+}
+
+.blog-post {
+    padding-top: 16px;
+}
+
+.post-title {
+    text-align: center;
+    font-size: 26px;
+    word-break: break-word;
+    font-weight: 400;
+}
+
+.post-title a {
+    color: rgba(0, 0, 0, .87);
+}
+
+.post-title a:hover {
+    text-decoration: underline;
+}
+
+.post-meta {
+    margin: 8px 0 32px 0;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+}
+
+.post-more {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.post-more .mdl-button--accent.mdl-button--accent {
+    color: white;
+    background-color: #FFC95C;
+}
+
+.pagination {
+    text-align: center;
+    margin: 120px 0 40px;
+}
+
+.pagination a {
+    color: black;
+    font-size: 24px;
+    font-weight: 400;
+    margin: 8px;
+}
+
+.pagination a:hover {
+    text-decoration: underline;
+}
+
+.page-link {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
+    padding: 0 10px;
+    line-height: 30px;
+}
+
+.page-current {
+    color: #fff;
+    background-color: #FFC95C;
+}
+
+.page-current a {
+    color: #fff;
+}
+
+.category-title  a {
+    color: black;
+    font-size: 24px;
+}
+
+.category-title  a:hover {
+    text-decoration: underline;
+}
+
+.category-number {
+    color: #999;
+}
+
+.tag {
+    display: inline-block;
+    margin: 8px;
+}
+
+.tag a {
+    color: black;
+}
+
+.post-tags {
+    margin-top: 32px;
+}
+
+.post-tags .tag {
+    margin: 0px;
+}
+
+/* 手机 */
+
+@media (max-width: 900px) {
+    .gooosie-navigation-container {
+        display: none;
+    }
+    .gooosie-title {
+        display: none !important;
+    }
+    .gooosie-mobile-title {
+        display: block !important;
+        position: absolute;
+        left: calc(50% - 70px);
+        top: 12px;
+        transition: opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}

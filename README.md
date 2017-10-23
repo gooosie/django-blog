@@ -1,0 +1,21 @@
+# django-blog
+
+一个用Django搭建的简单的博客。
+
+## 依赖
+
+```shell
+pip install -r requirements.txt
+```
+
+## 运行
+
+```shell
+python manage.py makemirations blog
+python manage.py migrate
+python manage.py runserver
+```
+
+## 开源协议
+
+[Apache License 2.0](/LICENSE)

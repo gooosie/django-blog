@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load custom_markdown %}
+
+{% block html_attribs %}
+lang="zh-cmn-Hans-CN" class="mdl-js"
+{% endblock %}
+
+{% block title %}{{ tag.name }} - Gooosie{% endblock %}
+
+{% block content %}
+    <main class="mdl-layout__content gooosie-content">
+        <div class="mdl-grid blog-posts">
+            <div class="mdl-cell mdl-cell--middle mdl-cell--12-col blog-post">
+                <h1 class="post-title">{{ tag.name }}</h1>
+            </div>
+        </div>
+    </main>
+{% endblock %}

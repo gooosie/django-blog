@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}archives - Gooosie{% endblock %}
+
+{% block content %}
+<div class="mdl-grid blog-posts">
+    <ul class="mdl-cell mdl-cell--middle mdl-cell--12-col mdl-list">
+        {% for date in date_list %}
+            <li class="mdl-list__item"><h3>{{ date|date:"Y" }}</h3></li>
+            <ul class="mdl-list">
+                {% for post in post_list %}
+                    {% if post.date_time.year == date.year %}
+                        <li class="mdl-list__item">
+                            <div>
+                                <span class="post-meta">{{ post.date_time|date:"m-d" }}</span>
+                                <span class="post-title"><a href="{% url 'article' id=post.id %}">{{ post.title }}</a></span>
+                            </div>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
+</div>
+{% if is_paginated %}
+<div class="pagination">
+        {% if page_obj.has_previous %}
+            <span class="page-link"><a href="?page={{ page_obj.previous_page_number }}">&lt;</a></span>
+        {% endif %}
+        {% for p in page_obj.paginator.page_range %}
+            <span class="page-link {% if p == page_obj.number %}page-current{% endif %}"><a href="?page={{ p }}">{{ p }}</a></span>
+        {% endfor %}
+        {% if page_obj.has_next %}
+            <span class="page-link"><a href="?page={{ page_obj.next_page_number }}">&gt;</a></span>
+        {% endif %}
+</div>
+{% endif %}
+{% endblock %}

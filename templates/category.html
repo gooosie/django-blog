@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load custom_markdown %}
+
+{% block html_attribs %}
+lang="zh-cmn-Hans-CN" class="mdl-js"
+{% endblock %}
+
+{% block title %}{{ category.name }} - Gooosie{% endblock %}
+
+{% block content %}
+    <main class="mdl-layout__content gooosie-content">
+        <div class="mdl-grid blog-posts">
+            <div class="mdl-cell mdl-cell--middle mdl-cell--12-col blog-post">
+                <h1 class="post-title">{{ category.name }}</h1>
+                <ul class="mdl-list">
+                        {% for post in post_list %}
+                            <li class="mdl-list__item">
+                                <div>
+                                    <span class="post-meta">{{ post.date_time|date:"Y-m-d" }}</span>
+                                    <span class="post-title"><a href="{% url 'article' id=post.id %}">{{ post.title }}</a></span>
+                                </div>
+                            </li>
+                        {% endfor %}
+                    </ul>
+            </div>
+        </div>
+    </main>
+{% endblock %}

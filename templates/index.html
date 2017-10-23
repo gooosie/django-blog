@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load custom_markdown %}
+
+{% block title %}Gooosie{% endblock %}
+
+{% block content %}
+    <main class="mdl-layout__content gooosie-content">
+        <div class="mdl-grid blog-posts">
+	    {% for post in post_list %}
+            <div class="mdl-cell mdl-cell--middle mdl-cell--12-col blog-post">
+                <h1 class="post-title"><a href="{% url 'article' id=post.id %}">{{ post.title }}</a></h1>
+                <div class="post-meta">
+                    <span class="post-time">{{ post.date_time|date:"Y-m-d" }}</span>
+                </div>
+                <div class="post-desc markdown-body">
+                    {{ post.content|custom_markdown|cut_summary }}
+                </div>
+                <div class="post-more">
+                    <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{% url 'article' id=post.id %}"><span>查看更多</span></a>
+                </div>
+            </div>
+	    {% endfor %}
+        </div>
+        {% if post_list.object_list and post_list.paginator.num_pages > 1 %}
+        <div class="pagination">
+                {% if post_list.has_previous %}
+                    <span class="page-link"><a href="?page={{ post_list.previous_page_number }}">&lt;</a></span>
+                {% endif %}
+                {% for p in post_list.paginator.page_range %}
+                    <span class="page-link {% if p == post_list.number %}page-current{% endif %}"><a href="?page={{ p }}">{{ p }}</a></span>
+                {% endfor %}
+                {% if post_list.has_next %}
+                    <span class="page-link"><a href="?page={{ post_list.next_page_number }}">&gt;</a></span>
+                {% endif %}
+        </div>
+        {% endif %}
+    </main>
+{% endblock %}
