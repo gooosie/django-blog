@@ -11,7 +11,7 @@ pip install -r requirements.txt
 ## 运行
 
 ```shell
-python manage.py makemirations blog
+python manage.py makemigrations blog
 python manage.py migrate
 python manage.py runserver
 ```
