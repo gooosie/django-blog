@@ -89,10 +89,6 @@ a img {
     display: none !important;
 }
 
-.gooosie-content {
-    min-height: 100%;
-}
-
 .blog-posts {
     max-width: 900px;
     padding: 0;
@@ -218,7 +214,6 @@ a img {
 .gooosie-footer {
     background-color: #FAFAFA;
     position: relative;
-    padding: 16px;
 }
 
 /* 手机 */
