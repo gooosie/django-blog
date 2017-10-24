@@ -66,6 +66,16 @@
 
         {% block content %}
         {% endblock content %}
+
+        {% block footer %}
+        <footer class="mdl-mini-footer gooosie-footer">
+            <div class="mdl-mini-footer--left-section">
+                <ul class="mdl-mini-footer--link-list">
+                    <li><a class="mdl-typography--font-light gooosie-link" href="https://github.com/gooosie">Github</a></li>
+                </ul>
+            </div>
+        </footer>
+        {% endblock footer%}
         </div>
         {% block scripts %}
         <script defer src="{% static 'js/material.min.js' %}"></script>

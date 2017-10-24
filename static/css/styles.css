@@ -202,6 +202,20 @@ a img {
     margin: 0px;
 }
 
+.gooosie-link {
+    text-decoration: none;
+    color: black !important;
+}
+  
+.gooosie-link:hover {
+    color: #FFAA00 !important;
+}
+
+.gooosie-footer {
+    background-color: #FAFAFA;
+    position: relative;
+}
+
 /* 手机 */
 
 @media (max-width: 900px) {
