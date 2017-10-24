@@ -16,6 +16,10 @@ python manage.py migrate
 python manage.py runserver
 ```
 
+## 示例
+
+[gooosie.com](http://gooosie.com/)
+
 ## 开源协议
 
 [Apache License 2.0](/LICENSE)
