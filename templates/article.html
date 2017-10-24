@@ -1,14 +1,9 @@
 {% extends "base.html" %}
 {% load custom_markdown %}
 
-{% block html_attribs %}
-lang="zh-cmn-Hans-CN" class="mdl-js"
-{% endblock %}
-
 {% block title %}{{ post.title }} - Gooosie{% endblock %}
 
 {% block content %}
-    <main class="mdl-layout__content gooosie-content">
         <div class="mdl-grid blog-posts">
             <div class="mdl-cell mdl-cell--middle mdl-cell--12-col blog-post">
                 <h1 class="post-title">{{ post.title }}</a></h1>
@@ -27,5 +22,4 @@ lang="zh-cmn-Hans-CN" class="mdl-js"
                 </div>
             </div>
         </div>
-    </main>
 {% endblock %}

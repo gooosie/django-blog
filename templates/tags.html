@@ -1,7 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<main class="mdl-layout__content gooosie-content">
     <div class="blog-posts">
         {% for tag in tag_list %}
             <div class="tag">
@@ -9,5 +8,4 @@
             </div>
         {% endfor %}
     </div>
-</main>
 {% endblock %}

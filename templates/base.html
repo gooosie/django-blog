@@ -64,9 +64,10 @@
             </div>
         {% endblock nav %}
 
+        <main class="mdl-layout__content gooosie-content">
         {% block content %}
         {% endblock content %}
-
+        
         {% block footer %}
         <footer class="mdl-mini-footer gooosie-footer">
             <div class="mdl-mini-footer--right-section">
@@ -77,6 +78,7 @@
             </div>
         </footer>
         {% endblock footer%}
+        </main>
         </div>
         {% block scripts %}
         <script defer src="{% static 'js/material.min.js' %}"></script>
