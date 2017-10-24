@@ -1,14 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="blog-posts">
-    <ul class="mdl-list">
-    {% for category in category_list %}
-    <li class="mdl-list__item">
-        <span class="category-title"><a href="{% url "category" name=category.name %}">{{ category.name }}</a></span>
-        <span class="category-number">({{ category.num_articles }})</span>
-    </li>        
-    {% endfor %}
-    </ul>
-</div>
+<main class="mdl-layout__content gooosie-content">
+    <div class="blog-posts">
+        <ul class="mdl-list">
+        {% for category in category_list %}
+        <li class="mdl-list__item">
+            <span class="category-title"><a href="{% url "category" name=category.name %}">{{ category.name }}</a></span>
+            <span class="category-number">({{ category.num_articles }})</span>
+        </li>        
+        {% endfor %}
+        </ul>
+    </div>
+</main>
 {% endblock %}

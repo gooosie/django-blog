@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="blog-posts">
-    {% for tag in tag_list %}
-        <div class="tag">
-            <span class="mdl-chip"><a href="{% url "tag" name=tag.name %}"><span class="mdl-chip__text">{{ tag.name }}</span></a></span>
-        </div>
-    {% endfor %}
-</div>
+<main class="mdl-layout__content gooosie-content">
+    <div class="blog-posts">
+        {% for tag in tag_list %}
+            <div class="tag">
+                <span class="mdl-chip"><a href="{% url "tag" name=tag.name %}"><span class="mdl-chip__text">{{ tag.name }}</span></a></span>
+            </div>
+        {% endfor %}
+    </div>
+</main>
 {% endblock %}
