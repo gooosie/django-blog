@@ -34,7 +34,8 @@ def category(request, name):
 
 def tag(request, name):
     tag = Tag.objects.get(name=name)
-    return render(request, 'tag.html', {'tag': tag})
+    post_list = Article.objects.filter(tag_id=tag.id)
+    return render(request, 'tag.html', {'tag': tag, 'post_list': post_list})
 
 def archives(request):
     try:
