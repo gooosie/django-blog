@@ -18,7 +18,7 @@ python manage.py runserver
 
 ## 示例
 
-[gooosie.com](http://gooosie.com/)
+[gooosie.com](https://gooosie.com/)
 
 ## 开源协议
 
